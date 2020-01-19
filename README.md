@@ -24,7 +24,7 @@ Programming expressions (variable assignments, operations, conditionals, loops) 
 # Fitness Function
 * Prediction Error = |Predicted Output - Test Output|
 
-# Challenges
+# Considerations
 1. Variables that have not be defined must not be accessed before definition.
     ```
     v0 = 0
