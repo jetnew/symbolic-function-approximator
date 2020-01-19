@@ -24,7 +24,13 @@ Programming expressions (variable assignments, operations, conditionals, loops) 
 # Fitness Function
 * Prediction Error = |Predicted Output - Test Output|
 
-# Sample Evolved Generated Functions
+# Seed Function
+```
+def f0(v0):
+    return v0
+```
+
+# Generated Evolved Functions
 * Generations: 200
 * Children per generation: 50
 ```python
