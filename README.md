@@ -22,4 +22,53 @@ Programming expressions (variable assignments, operations, conditionals, loops) 
 * Delete existing expressions
 
 # Fitness Function
-* Prediction Error = |Predicted Output - Test Output| 
+* Prediction Error = |Predicted Output - Test Output|
+
+# Challenges
+1. Variables that have not be defined must not be accessed before definition.
+    ```
+    v0 = 0
+    v2 = v1
+    v1 = 1
+    Traceback (most recent call last):
+      File "<stdin>", line 2, in <module>
+    NameError: name 'v1' is not defined
+    ```
+2. Variables that are initialised within an if-else conditional must not be accessed if the conditional has not been run.
+    ```
+    v1 = 0
+    v0 = 1
+    if v1 > v0:
+        v2 = 0
+    v3 = v2
+    Traceback (most recent call last):
+      File "<stdin>", line 4, in <module>
+    NameError: name 'v2' is not defined
+    ```
+3. Division / and modulo % must address ZeroDivisionError.
+    ```
+    v0 = 0
+    v1 = v0 / v0
+    Traceback (most recent call last):
+      File "<stdin>", line 2, in <module>
+    ZeroDivisionError: division by zero
+    ```
+4. Conditionals (if-else) must track number of indents.
+    ```
+    v0, v1 = 0, 1
+    if v0 > 0:
+    if v1 > 1:
+            v2 = 3
+    File "<stdin>", line 3
+        if v1 > 1:
+         ^
+    IndentationError: expected an indented block
+    ```
+5. Deletion of variables must consider downstream access of deleted variables.
+    ```
+    # v1 = 0
+    v1 = v0
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    NameError: name 'v0' is not defined
+    ```
