@@ -1,5 +1,5 @@
 # Symbolic Function Approximator
-Symbolic function approximator aims to create a function to approximate a data distribution using the symbolic paradigm with programming logic.
+Symbolic function approximator aims to generate a function using a genetic algorithm to approximate a data distribution using the symbolic paradigm with programming logic.
 
 # Motive
 In the debate between symbolic and connectionist paradigms of artificial intelligence (AI), while connectionist neural networks have been popular, some argue that symbolic methods are still necessary to advance the state of AI.
@@ -23,6 +23,47 @@ Programming expressions (variable assignments, operations, conditionals, loops) 
 
 # Fitness Function
 * Prediction Error = |Predicted Output - Test Output|
+
+# Sample Evolved Generated Functions
+* Generations: 200
+* Children per generation: 50
+```python
+def f0(v0):
+	v1 = 1
+	v0 = mod(v0, v0)
+	v2 = v0 + v0
+	v2 = div(v0, v1)
+	v4 = v2 + v0
+	v0 = v0 + v2
+	v4 = div(v1, v0)
+	v4 = div(v1, v2)
+	v1 = v4 * v2
+	v1 = v2 + v0
+	v5 = v4 - v1
+	return v0
+
+def f1(v0):
+	v0 = mod(v0, v0)
+	v1 = v0 - v0
+	v3 = 6
+	v1 = v0 + v0
+	if v0 < v0:
+		if v1 > v0:
+			v0 = div(v1, v0)
+	v1 = v1 - v1
+	v3 = mod(v0, v1)
+	v1 = mod(v1, v1)
+	v2 = div(v1, v0)
+	v9 = -4
+	v8 = mod(v0, v0)
+	v5 = v8 - v1
+	v2 = v8 * v9
+	v12 = v2 + v5
+	v0 = mod(v12, v1)
+	v15 = 0
+	v5 = v1 - v0
+	return v0
+```
 
 # Considerations
 1. Variables that have not be defined must not be accessed before definition.

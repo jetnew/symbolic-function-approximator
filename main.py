@@ -4,7 +4,7 @@ from gene import *
 
 chro = []
 selected = Function('f'+str(i), chro)
-for i in range(1000):
+for i in range(200):
     if i % 20 == 0:
         print("Generation:", i)
     # Mutate
